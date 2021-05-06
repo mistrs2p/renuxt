@@ -32,7 +32,9 @@ export default {}
 </script>
 
 <style>
+
 .container {
+  direction: rtl;
   margin: 0 auto;
   min-height: 100vh;
   display: flex;
