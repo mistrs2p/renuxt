@@ -7,6 +7,7 @@
 <style>
 html {
   font-family:
+    IranSans,
     'Source Sans Pro',
     -apple-system,
     BlinkMacSystemFont,
@@ -22,11 +23,13 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  font-weight: 400;
 }
 
 *,
 *::before,
 *::after {
+  direction: rtl;
   box-sizing: border-box;
   margin: 0;
 }

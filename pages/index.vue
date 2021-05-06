@@ -33,6 +33,7 @@ export default {}
 
 <style>
 
+
 .container {
   direction: rtl;
   margin: 0 auto;

@@ -9,7 +9,7 @@
       <p>محتوای پست</p>
     </section>
     <section class="post-feedback">
-      <p>نظر خود را راجع به این پست به نشانی <a href="mailto:mahdimousavi40@gmail.com">Mahdimousavi40@gmail.com</a>ارسال کنید.</p>
+      <p>نظر خود را راجع به این پست به نشانی <a href="mailto:mahdimousavi40@gmail.com">Mahdimousavi40@gmail.com </a>ارسال کنید.</p>
     </section>
   </div>
 </template>
@@ -22,6 +22,9 @@ export default {
 
 <style scoped>
   .single-post-page {
+    /* direction: rtl;
+    font-family: 'IranSans';
+    font-weight: 400; */
     padding: 30px;
     text-align: center;
     box-sizing: border-box;
