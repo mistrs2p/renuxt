@@ -17,7 +17,7 @@
 
 <script>
 export default {
-data () {
+  data () {
     return {
       editedPost: {
       author: '',
@@ -27,6 +27,12 @@ data () {
       }
     }
   },
+  props: {
+    post: {
+      type: Object,
+      required: false
+    }
+},
   methods: {
     onSave () {
       console.log(this.editedPost)
