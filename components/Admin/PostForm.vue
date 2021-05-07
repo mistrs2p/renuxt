@@ -17,22 +17,24 @@
 
 <script>
 export default {
-  data () {
-    return {
-      editedPost: {
-      author: '',
-      title: '',
-      thumbnailLink: '',
-      content: ''
-      }
-    }
-  },
   props: {
     post: {
       type: Object,
       required: false
     }
-},
+  },
+  data () {
+    return {
+      editedPost: this.post 
+        ? { ...this.post } 
+        : {
+          author: '',
+          title: '',
+          thumbnailLink: '',
+          content: ''
+        }
+    }
+  },
   methods: {
     onSave () {
       console.log(this.editedPost)
