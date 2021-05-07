@@ -1,12 +1,12 @@
 <template>
   <div class="single-post-page">
     <section class="post">
-      <h1>عنوان پست</h1>
+      <h1>{{ loadedPost.title }}</h1>
       <div class="post-details">
-        <div class="post-detail">آخرین بروزرسانی در XXX</div>
-        <div class="post-detail">نوشته شده توسط اسم شخصر</div>
+        <div class="post-detail">آخرین بروزرسانی در {{ loadedPost.updatedDate}}</div>
+        <div class="post-detail">نوشته شده توسط {{ loadedPost.author }}</div>
       </div>
-      <p>محتوای پست</p>
+      <p>{{ loadedPost.content}}</p>
     </section>
     <section class="post-feedback">
       <p>نظر خود را راجع به این پست به نشانی <a href="mailto:mahdimousavi40@gmail.com">Mahdimousavi40@gmail.com </a>ارسال کنید.</p>
@@ -16,7 +16,22 @@
 
 <script>
 export default {
-
+  asyncData(context, callback) {
+    setTimeout(() => {
+      callback(null, {
+        loadedPost: {
+          id: '1',
+          title: 'پست شماره ۱ با شماره ID:' + context.params.id,
+          // title: 'پست شماره ۱ با شماره ID:' + context.route.params.id,
+          thumbnailLink: 'https://www.bbva.com/wp-content/uploads/2017/08/innovacion-bbva-100817-1024x551.jpg',
+          author: 'مهدی',
+          updatedDate: new Date(),
+          content: 'این محتوای خیلی خفنه باحالیه که داریم. بهترین محتوای قرن!!!',
+          previewText: 'محتوای شماره 1'
+        },
+      })
+    }, 1000)
+  }
 }
 </script>
 
