@@ -1,7 +1,7 @@
 <template>
   <div class="admin-page">
     <section class="new-post">
-      <button @click="$router.push('admin/new-post')">ایجاد پست جدید</button>
+      <UIAppButton @click="$router.push('admin/new-post')">ایجاد پست جدید</UIAppButton>
     </section>
     <section class="existing-posts">
       <h1>پست های موجود</h1>
