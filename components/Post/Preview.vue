@@ -42,7 +42,7 @@ export default {
  },
  computed: {
    postLink() {
-     return this.isAdmin ? '/admin/' + id : '/posts/' + id
+     return this.isAdmin ? '/admin/' + this.id : '/posts/' + this.id
    }
  }
 }
