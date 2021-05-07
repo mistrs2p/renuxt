@@ -12,7 +12,7 @@
         <UIAppButton
           type="button"
           style="margin-left: 10px"
-          btn-style="canel"
+          btn-style="cancel"
           @click="onCancel">صرف نظر</UIAppButton>
       </form>
     </section>
@@ -32,7 +32,9 @@ export default {
    }
  },
  methods: {
-   onSave () {},
+   onSave () {
+     console.log(this.editedPost)
+   },
    onCancel () {
      this.$router.push('/admin')
    }
