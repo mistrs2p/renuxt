@@ -2,18 +2,18 @@
   <div class="admin-new-post-page">
     <section class="new-post-form">
       <form @submit.prevent="onSave">
-        <AppControlInput v-model="editedPost.author">Author Name</AppControlInput>
-        <AppControlInput v-model="editedPost.title">Title</AppControlInput>
-        <AppControlInput v-model="editedPost.thumbnailLink">Thumbnail Link</AppControlInput>
-        <AppControlInput
+        <UIAppControlInput v-model="editedPost.author">نام نویسنده</UIAppControlInput>
+        <UIAppControlInput v-model="editedPost.title">عنوان</UIAppControlInput>
+        <UIAppControlInput v-model="editedPost.thumbnailLink">لینک عکس</UIAppControlInput>
+        <UIAppControlInput
           control-type="textarea"
-          v-model="editedPost.content">Content</AppControlInput>
-        <AppButton type="submit">Save</AppButton>
-        <AppButton
+          v-model="editedPost.content">محتوا</UIAppControlInput>
+        <UIAppButton type="submit">ذخیره</UIAppButton>
+        <UIAppButton
           type="button"
           style="margin-left: 10px"
-          btn-style="cancel"
-          @click="onCancel">Cancel</AppButton>
+          btn-style="canel"
+          @click="onCancel">صرف نظر</UIAppButton>
       </form>
     </section>
   </div>
@@ -33,7 +33,9 @@ export default {
  },
  methods: {
    onSave () {},
-   onCanel () {}
+   onCancel () {
+     this.$router.push('/admin')
+   }
  }
 }
 </script>
