@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  asyncData(context) {
+  fetch(context) {
     console.log('AsyncData Is Executed!')
     // console.log(context)
 
@@ -45,16 +45,22 @@ export default {
       // When It Resolved Then Below
       .then(data => {
         // data Here Is My Posts
-        return data
+        // return data
+        context.store.commit('setPosts', data.loadedPosts)
       })
       .catch(e => {
         context.error(e)
       })
 
   },
-  created() {
-    this.$store.dispatch('setPosts', this.loadedPosts)
-    // console.log(this.$store.getters.loadedPosts)
+  // created() {
+  //   this.$store.dispatch('setPosts', this.loadedPosts)
+  //   // console.log(this.$store.getters.loadedPosts)
+  // }
+  computed: {
+    loadedPosts() {
+      return this.$store.getters.loadedPosts
+    }
   }
 }
 </script>
