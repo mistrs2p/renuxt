@@ -12,8 +12,8 @@ export const actions = {
   nuxtServerInit(vuexContext, context) {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        resolve({
-          loadedPosts: [
+        vuexContext.commit('setPosts', 
+          [
             {
               id: '1',
               title: 'پست شماره ۱',
@@ -33,7 +33,8 @@ export const actions = {
               previewText: 'محتوای شماره ۳'
             }
           ] 
-        })
+        )
+        resolve()
       }, 1500)
     })
   },
