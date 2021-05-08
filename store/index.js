@@ -9,6 +9,9 @@ export const mutations = {
 }
 
 export const actions = {
+  nuxtServerInit(vuexContext, context) {
+
+  },
   setPosts(vuexContext, posts) {
     vuexContext.commit('setPosts', posts)
   }
